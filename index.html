@@ -1,22 +1,5 @@
 
-<?php
-$file = 'counter.txt';
-
-// 檢查文件是否存在
-if (!file_exists($file)) {
-    // 如果文件不存在，創建文件並設置初始值為0
-    file_put_contents($file, '0');
-}
-
-// 讀取當前的計數值
-$count = (int)file_get_contents($file);
-
-// 增加計數
-$count++;
-
-// 將新的計數值寫回文件
-file_put_contents($file, (string)$count);
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
@@ -39,7 +22,7 @@ file_put_contents($file, (string)$count);
 	<p id="result1"></p>
 	<p id="result11"></p>
 	<p id="result111"></p>
-	 <p>本頁面已被訪問 <?php echo $count; ?> 次。</p>
+	
 </body>
 </html>
 
